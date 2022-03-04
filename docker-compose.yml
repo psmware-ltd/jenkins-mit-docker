@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  my-jenkins:
+    image: my-jenkins
+    container_name: my-jenkins
+    hostname: my-jenkins
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./jenkins_data:/var/jenkins_home
+    ports:
+      - 8080:8080
