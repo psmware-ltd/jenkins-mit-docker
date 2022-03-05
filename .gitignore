@@ -17,4 +17,6 @@
 .ionide
 
 # Ignore Jenkins Persisted Data
-jenkins_data
+jenkins_data/*
+# Keep the folder so that the image builds
+!jenkins_data/.gitkeep
